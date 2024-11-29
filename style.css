@@ -176,7 +176,7 @@ span {
 }
 
 .home-img img {
-    width: 85vw;
+    width: 40vw;
     position: relative;
     box-shadow: 0 0 25 var(--main-color);
     border-radius: 50%;
@@ -443,14 +443,13 @@ span {
     width: 70%;
     margin: auto;
     margin-top: 2rem;
-}
-
-.skills .container .row {
     display: grid;
     flex-wrap: wrap;
     grid-template-columns: repeat(6, 1fr);
     gap: 1.8rem;
 }
+
+.skills .container .row {}
 
 .skills .container .bar {
     margin-top: 15px;
@@ -571,7 +570,7 @@ span {
     width: 0;
     z-index: 1;
     right: 30px;
-    border: medium solid var(--main-color);
+    border: medium sol var(--main-color);
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent var(--main-color);
 }
@@ -585,8 +584,8 @@ span {
     z-index: 1;
     left: 30px;
     border: medium solid var(--main-color);
-    border-width: 10px 10px 10px 10px;
-    border-color: transparent var(--main-color) transparent transparent;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--main-color);
 }
 
 .education .right::after {
@@ -667,20 +666,20 @@ span {
 }
 
 .contact form {
-    min-width:70px;
+    min-width: 70px;
     margin: 1rem auto;
     margin-bottom: 3rem;
-    text-align:center;
+    text-align: center;
 }
 
-.contact form .input-box{
+.contact form .input-box {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .contact form .input-box input,
-.contact form textarea{
+.contact form textarea {
     width: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
@@ -705,13 +704,14 @@ span {
     padding: 40px 0;
     background-color: var(--main-color);
 }
+
 .footer .social {
     text-align: center;
     padding-bottom: 25px;
     color: #000;
 }
 
-.footer .social a{
+.footer .social a {
     font-size: 25px;
     color: #000;
     border: 2px solid #000;
@@ -724,7 +724,7 @@ span {
     transition: 0.3s ease;
 }
 
-.footer .social a:hover{
+.footer .social a:hover {
     transform: scale(1.2) translateY(-5px);
     background: var(--bg-color);
     color: var(--main-color);
@@ -739,13 +739,13 @@ span {
     text-align: center;
 }
 
-.footer ul li a{
+.footer ul li a {
     color: #000;
     border-bottom: 3px solid transparent;
     transition: 0.3s ease;
 }
 
-.footer ul li a:hover{
+.footer ul li a:hover {
     border-bottom: 3px solid #000;
 }
 
@@ -754,38 +754,95 @@ span {
     padding: 0 15px;
 }
 
-footer .copyright{
+footer .copyright {
     margin-top: 50px;
     text-align: center;
     font-size: 16px;
-    color:#000;
+    color: #000;
 }
 
 @media (max-width:1285px) {
     html {
         font-size: 55%;
     }
-    
+
     .services-container {
         padding-bottom: 7rem;
         grid-template-columns: repeat(2, 1fr);
         margin: 0 5rem;
     }
 }
-@media (max-width:991px){
-    .header{
+
+@media (max-width:991px) {
+    .header {
         padding: 2rem 3%;
     }
+
     section {
         padding: 10rem 3% 2rem;
     }
+
     .services {
         padding-bottom: 7rem;
     }
+
     .footer {
         padding: 2rem 3%;
     }
 }
 
 
+/* input test */
 
+.input_walper {
+    position: relative;
+    padding: 15px 0 0;
+    background: #000;
+}
+
+.input_field {
+    border: 1.5px solid var(--main-color);
+    font-size: 1rem;
+    border-radius: 8px;
+    color: yellow;
+    padding: 8px;
+    padding-right: 32px;
+    background: transparent;
+    transition: .2s;
+    display: flex;
+    align-items: center;
+}
+
+.input_field::placeholder {
+    color: transparent;
+}
+
+.input_field:placeholder-shown~.input_label {
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: text;
+    color: #757575;
+    top: 40px;
+    background: none;
+}
+
+label,
+.input_field:focus~.input_label {
+    position: absolute;
+    top: 10px;
+    padding: 0 4px;
+    display: block;
+    font-size: 1.5rem;
+    left: 8px;
+    color: #FFF;
+    pointer-events: none;
+    transition: .2s;
+    outline: hidden;
+    border-radius: 5px;
+    background: var(--bg-color);
+}
+
+.input_field:focus {
+    border: 1.5px solid var(--main-color);
+    outline: 1px solid var(--main-color);
+}
