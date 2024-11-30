@@ -1,0 +1,21 @@
+/*----------education----------*/
+.education .box {
+  margin-top: 20px;
+}
+
+.education .content h1 {
+  font-size: 40px;
+  color: #1ebd65;
+  margin-right: 30px;
+}
+
+.education .content h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.education .contentLeft {
+  padding: 80px 50px;
+}
+
+/*----------education----------*/
